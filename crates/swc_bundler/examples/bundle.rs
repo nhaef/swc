@@ -79,7 +79,7 @@ fn do_test(_entry: &Path, entries: HashMap<String, FileName>, inline: bool, mini
                 NodeModulesResolver::new(TargetEnv::Node, Default::default(), true),
             ),
             swc_bundler::Config {
-                require: false,
+                require: true,
                 disable_inliner: !inline,
                 external_modules: Default::default(),
                 disable_fixer: minify,
